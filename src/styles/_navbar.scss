@@ -35,6 +35,21 @@
       &__arrow__img {
         margin: 15.5px 11px 15.5px auto;
       }
+
+      &__sub {
+        cursor: pointer;
+        text-decoration: none;
+        color: variables.$secundary-color;
+        font-family: variables.$primary-font;
+        padding: 15.5px 30px 15.5px 31px;
+        margin-left: auto;
+        margin-right: 12px;
+      }
+
+      &__sub:focus {
+        background-color: variables.$third-color;
+        border-radius: 5px;
+      }
     }
 
     &__item:focus {

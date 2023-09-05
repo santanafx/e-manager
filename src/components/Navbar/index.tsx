@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import { MdKeyboardArrowLeft } from 'react-icons/md'
+import { useState } from 'react'
 
 import { closeMenu, openMenu } from '../../store/reducers/navbar'
 import { RootReducer } from '../../store'
@@ -11,6 +12,8 @@ import menuOptGraph from '../../assets/images/menuOptGraph.png'
 import chevronDown from '../../assets/images/chevronDown.png'
 
 export default function Navbar() {
+  const [menuDashboardOpen, setMenuDashboardOpen] = useState(false)
+  const [menuProdutosOpen, setMenuProdutosOpen] = useState(false)
   const { isOpen } = useSelector((state: RootReducer) => state.navbar)
 
   const dispatch = useDispatch()
@@ -21,6 +24,14 @@ export default function Navbar() {
 
   const openSideMenu = () => {
     dispatch(openMenu())
+  }
+
+  const toggleDashboardMenu = () => {
+    setMenuDashboardOpen(!menuDashboardOpen)
+  }
+
+  const toggleProdutosMenu = () => {
+    setMenuProdutosOpen(!menuProdutosOpen)
   }
 
   return (
@@ -35,30 +46,43 @@ export default function Navbar() {
                   to="/dashboard"
                   className="navbar__menu__list__item"
                   tabIndex={1}
+                  onClick={toggleDashboardMenu}
                 >
                   <img
                     className="navbar__menu__list__item__icon__img"
                     src={menuOptGrid}
                     alt="Menu option"
                   />
-                  <span>Dashboard</span>
+                  Dashboard
                   <img
                     className="navbar__menu__list__item__arrow__img"
                     src={chevronDown}
                     alt="Menu arrow"
                   />
                 </Link>
+                {menuDashboardOpen ? (
+                  <Link
+                    to="/dashboard"
+                    className="navbar__menu__list__item__sub"
+                    tabIndex={3}
+                  >
+                    Buscar Produtos
+                  </Link>
+                ) : (
+                  ''
+                )}
                 <Link
                   to="/produtos"
                   className="navbar__menu__list__item"
                   tabIndex={2}
+                  onClick={toggleProdutosMenu}
                 >
                   <img
                     className="navbar__menu__list__item__icon__img"
                     src={menuOptGraph}
                     alt="Menu option"
                   />
-                  <span>Produtos</span>
+                  Produtos
                   <img
                     className="navbar__menu__list__item__arrow__img"
                     src={chevronDown}
