@@ -1,7 +1,41 @@
+.navbar__menu {
+  background-color: #3e63ac;
+  width: 285px;
+  height: 100vh;
+}
+.navbar__menu__logo__img {
+  margin: 26px 22.61px 53px 33px;
+}
+.navbar__menu__list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.navbar__menu__list__item {
+  display: flex;
+  align-items: center;
+  width: 260px;
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+.navbar__menu__list__item__icon__img {
+  margin: 15.5px 30px 15.5px 31px;
+}
+.navbar__menu__list__item__arrow__img {
+  margin: 15.5px 11px 15.5px auto;
+}
+.navbar__menu__list__item:focus {
+  background-color: #224385;
+  border-radius: 5px;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
 
 /*# sourceMappingURL=main.css.map */

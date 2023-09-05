@@ -1,0 +1,40 @@
+@use 'variables';
+
+.navbar__menu {
+  background-color: variables.$primary-color;
+  width: 285px;
+  height: 100vh;
+
+  &__logo__img {
+    margin: 26px 22.61px 53px 33px;
+  }
+
+  &__list {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    &__item {
+      display: flex;
+      align-items: center;
+      width: 260px;
+      cursor: pointer;
+      text-decoration: none;
+      color: variables.$secundary-color;
+
+      &__icon__img {
+        margin: 15.5px 30px 15.5px 31px;
+      }
+
+      &__arrow__img {
+        margin: 15.5px 11px 15.5px auto;
+      }
+    }
+
+    &__item:focus {
+      background-color: variables.$third-color;
+      border-radius: 5px;
+    }
+  }
+}
