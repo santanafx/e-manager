@@ -34,7 +34,7 @@ export default function Navbar() {
                 <Link
                   to="/dashboard"
                   className="navbar__menu__list__item"
-                  tabIndex={-1}
+                  tabIndex={1}
                 >
                   <img
                     className="navbar__menu__list__item__icon__img"
@@ -51,7 +51,7 @@ export default function Navbar() {
                 <Link
                   to="/produtos"
                   className="navbar__menu__list__item"
-                  tabIndex={-2}
+                  tabIndex={2}
                 >
                   <img
                     className="navbar__menu__list__item__icon__img"
