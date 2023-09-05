@@ -1,7 +1,11 @@
 .navbar__menu {
   background-color: #3e63ac;
+  position: fixed;
+  top: 0;
+  left: 0;
   width: 285px;
-  height: 100vh;
+  height: 100%;
+  z-index: 1;
 }
 .navbar__menu__logo__img {
   margin: 26px 22.61px 53px 33px;
@@ -29,6 +33,28 @@
 .navbar__menu__list__item:focus {
   background-color: #224385;
   border-radius: 5px;
+}
+
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.navbar__open__menu {
+  position: absolute;
+  top: 250px;
+  left: 0;
+  background-color: #3e63ac;
+  height: 70px;
+  width: 50px;
+  border: none;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+  display: flex;
+  align-items: center;
 }
 
 * {

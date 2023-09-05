@@ -1,12 +1,15 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { Provider } from 'react-redux'
+
+import { store } from './store/index'
 import Navbar from './components/Navbar'
-import './css/main.css'
 import Dashboard from './pages/Dashboard'
 import Produtos from './pages/Produtos/Index'
+import './css/main.css'
 
 function App() {
   return (
-    <>
+    <Provider store={store}>
       <BrowserRouter>
         <Navbar />
         <Routes>
@@ -14,7 +17,7 @@ function App() {
           <Route path="/produtos" element={<Produtos />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </Provider>
   )
 }
 
