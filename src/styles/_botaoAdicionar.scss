@@ -1,0 +1,15 @@
+@use 'variables';
+
+.botaoAdicionar {
+  width: 233px;
+  height: 57px;
+  padding: 10px 20px 10px 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: variables.$primary-color;
+  color: variables.$cardline-color;
+  font-family: variables.$primary-font;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
