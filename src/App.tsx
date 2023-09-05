@@ -6,6 +6,7 @@ import Navbar from './components/Navbar'
 import Dashboard from './pages/Dashboard'
 import Produtos from './pages/Produtos/Index'
 import './css/main.css'
+import BuscarProdutos from './pages/BuscarProdutos'
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/produtos" element={<Produtos />} />
+          <Route path="/produtos/buscarProdutos" element={<BuscarProdutos />} />
         </Routes>
       </BrowserRouter>
     </Provider>

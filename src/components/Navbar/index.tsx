@@ -62,7 +62,7 @@ export default function Navbar() {
                 </Link>
                 {menuDashboardOpen ? (
                   <Link
-                    to="/dashboard"
+                    to="/produtos/buscarProdutos"
                     className="navbar__menu__list__item__sub"
                     tabIndex={3}
                   >
