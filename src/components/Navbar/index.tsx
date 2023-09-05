@@ -3,12 +3,12 @@ import { useDispatch, useSelector } from 'react-redux'
 import { MdKeyboardArrowLeft } from 'react-icons/md'
 
 import { closeMenu, openMenu } from '../../store/reducers/navbar'
+import { RootReducer } from '../../store'
 
 import logo from '../../assets/images/logo.png'
 import menuOptGrid from '../../assets/images/menuOptGrid.png'
 import menuOptGraph from '../../assets/images/menuOptGraph.png'
 import chevronDown from '../../assets/images/chevronDown.png'
-import { RootReducer } from '../../store'
 
 export default function Navbar() {
   const { isOpen } = useSelector((state: RootReducer) => state.navbar)
@@ -18,9 +18,11 @@ export default function Navbar() {
   const closeSideMenu = () => {
     dispatch(closeMenu())
   }
+
   const openSideMenu = () => {
     dispatch(openMenu())
   }
+
   return (
     <>
       {isOpen ? (

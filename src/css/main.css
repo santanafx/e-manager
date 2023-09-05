@@ -57,11 +57,39 @@
   align-items: center;
 }
 
+.cardProdutos__container {
+  width: 407px;
+  height: 392px;
+  background-color: #fefefe;
+  border-radius: 4px;
+  box-shadow: 0px 9px 11px 0px rgba(0, 0, 0, 0.1490196078);
+}
+.cardProdutos__container__title {
+  font-family: "Roboto", sans-serif;
+  font-weight: 600;
+  font-size: 22px;
+  line-height: 32px;
+  text-align: center;
+  border-bottom: 1px solid #e0e5eb;
+  padding: 25px 14px;
+}
+
+.dashboard__container {
+  margin-left: 305px;
+  margin-top: 67px;
+  display: flex;
+  gap: 20px;
+}
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #f9f7f7;
 }
 
 /*# sourceMappingURL=main.css.map */
