@@ -43,7 +43,7 @@ export default function Navbar() {
             <nav>
               <div className="navbar__menu__list">
                 <Link
-                  to="/dashboard"
+                  to="/"
                   className="navbar__menu__list__item"
                   tabIndex={1}
                   onClick={toggleDashboardMenu}

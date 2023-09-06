@@ -138,6 +138,9 @@
   line-height: 22px;
   margin-bottom: 29px;
 }
+.produtos__container__form__input::placeholder {
+  color: #ccd2db;
+}
 
 .buscarProdutos__container {
   margin-top: 110px;
@@ -189,6 +192,7 @@
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
+  cursor: pointer;
 }
 
 * {
