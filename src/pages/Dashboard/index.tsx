@@ -5,6 +5,7 @@ import { Produtos } from '../../types/index'
 
 export default function Dashboard() {
   const [getData, setGetData] = useState<Produtos[]>([])
+
   useEffect(() => {
     const url = 'http://localhost:8000/products'
     fetch(url)

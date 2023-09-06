@@ -40,4 +40,32 @@
       margin-left: 12px;
     }
   }
+
+  &__table {
+    &__head {
+      background-color: variables.$cardline-color;
+      color: variables.$third-color;
+      font-family: variables.$primary-font;
+      font-size: 18px;
+      font-weight: 400;
+      line-height: 27px;
+      margin-bottom: 38px;
+
+      &__row {
+        margin-bottom: 24px;
+      }
+
+      &__item {
+        width: 173.55px;
+        height: 43px;
+      }
+    }
+
+    &__body {
+      font-family: variables.$primary-font;
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 27px;
+    }
+  }
 }

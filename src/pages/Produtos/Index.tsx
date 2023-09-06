@@ -1,11 +1,16 @@
 import { useState } from 'react'
 import BotaoAdicionar from '../../components/BotaoAdicionar'
+import { storeItems } from '../../store/reducers/produtos'
+import { useDispatch } from 'react-redux'
+import { Produtos as ProdutosType } from '../../types'
 
 export default function Produtos() {
   const [nome, setNome] = useState('')
   const [categoria, setCategoria] = useState('')
   const [preco, setPreco] = useState('')
   const [quantidade, setQuantidade] = useState('')
+
+  const dispatch = useDispatch()
 
   const addItem = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
@@ -36,6 +41,7 @@ export default function Produtos() {
       })
       .then((data) => {
         console.log('Resposta:', data)
+        storeData(data)
       })
       .catch((error) => {
         console.error('Erro:', error.message)
@@ -45,6 +51,10 @@ export default function Produtos() {
     setCategoria('')
     setPreco('')
     setQuantidade('')
+  }
+
+  const storeData = (data: ProdutosType) => {
+    dispatch(storeItems(data))
   }
 
   return (

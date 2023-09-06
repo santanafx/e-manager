@@ -1,7 +1,8 @@
 export type Produtos = {
-  id: string
+  id?: string
   name: string
-  category: string
   price: number
   quantity: number
+  category: string
+  created_at?: string
 }

@@ -225,6 +225,28 @@
   transform: translate(0, -50%);
   margin-left: 12px;
 }
+.buscarProdutos__container__table__head {
+  background-color: #e0e5eb;
+  color: #224385;
+  font-family: "Poppins", sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 27px;
+  margin-bottom: 38px;
+}
+.buscarProdutos__container__table__head__row {
+  margin-bottom: 24px;
+}
+.buscarProdutos__container__table__head__item {
+  width: 173.55px;
+  height: 43px;
+}
+.buscarProdutos__container__table__body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+}
 
 .botaoAdicionar {
   width: 233px;
