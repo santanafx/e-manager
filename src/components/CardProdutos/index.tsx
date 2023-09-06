@@ -1,6 +1,6 @@
 type Props = {
   title: string
-  children?: string
+  children?: React.ReactNode
 }
 
 export default function CardProdutos({ title, children }: Props) {

@@ -98,6 +98,52 @@
   flex-wrap: wrap;
   gap: 20px;
 }
+.dashboard__container__estoque {
+  margin: 24px 16px 0 16px;
+}
+.dashboard__container__estoque__item {
+  display: flex;
+  justify-content: space-between;
+  color: #cc0e30;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.dashboard__container__caros {
+  margin: 24px 16px 0 16px;
+}
+.dashboard__container__caros__item {
+  display: flex;
+  justify-content: space-between;
+  color: #3e63ac;
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 18.75px;
+  font-weight: 400;
+  margin-bottom: 24px;
+}
+.dashboard__container__caros__item__price {
+  color: #21bf60;
+}
+.dashboard__container__produtos {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  font-family: "Roboto", sans-serif;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 24px;
+}
+.dashboard__container__produtos__numero {
+  font-family: "Poppins", sans-serif;
+  font-size: 48px;
+  font-weight: 600;
+  line-height: 58px;
+  margin-top: 96px;
+  margin-bottom: 8px;
+}
 
 .produtos__container {
   margin-top: 110px;

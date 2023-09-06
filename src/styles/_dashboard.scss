@@ -1,7 +1,62 @@
+@use 'variables';
+
 .dashboard__container {
   margin-left: 305px;
   margin-top: 67px;
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
+
+  &__estoque {
+    margin: 24px 16px 0 16px;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      color: variables.$first-textColor;
+      font-family: variables.$secundary-font;
+      font-size: 16px;
+      line-height: 18.75px;
+      font-weight: 400;
+      margin-bottom: 24px;
+    }
+  }
+
+  &__caros {
+    margin: 24px 16px 0 16px;
+
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      color: variables.$primary-color;
+      font-family: variables.$secundary-font;
+      font-size: 16px;
+      line-height: 18.75px;
+      font-weight: 400;
+      margin-bottom: 24px;
+
+      &__price {
+        color: variables.$secundary-textColor;
+      }
+    }
+  }
+
+  &__produtos {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    font-family: variables.$secundary-font;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 24px;
+
+    &__numero {
+      font-family: variables.$primary-font;
+      font-size: 48px;
+      font-weight: 600;
+      line-height: 58px;
+      margin-top: 96px;
+      margin-bottom: 8px;
+    }
+  }
 }
