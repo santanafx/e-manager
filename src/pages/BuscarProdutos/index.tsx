@@ -1,18 +1,16 @@
 import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import { parseToBrl } from '../../utils'
+import { Produtos } from '../../types'
+import { storeItems } from '../../store/reducers/produtos'
 
 import lupa from '../../assets/images/lupa.png'
 import BotaoEditar from '../../components/BotaoEditar'
 import BotaoRemover from '../../components/BotaoRemover'
 import PopupRemove from '../../components/PopupRemove'
-import { useNavigate } from 'react-router-dom'
-import { Produtos } from '../../types'
-import { storeItems } from '../../store/reducers/produtos'
-
-// window.location.reload()
 
 export default function BuscarProdutos() {
   const { items } = useSelector((state: RootReducer) => state.produtos)

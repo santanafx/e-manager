@@ -2,7 +2,7 @@
 
 .cardProdutos__container {
   width: 407px;
-  height: 392px;
+  min-height: 392px;
   background-color: variables.$card-color;
   border-radius: 4px;
 
