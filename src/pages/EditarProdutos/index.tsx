@@ -1,12 +1,15 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
+import { useNavigate } from 'react-router-dom'
 import { storeItems } from '../../store/reducers/produtos'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { Produtos as ProdutosType } from '../../types'
 import BotaoAtualizar from '../../components/BotaoAtualizar'
 import { useParams } from 'react-router-dom'
+import { RootReducer } from '../../store'
 
 export default function EditarProdutos() {
-  const { name } = useParams()
+  const { id } = useParams()
+  const { items } = useSelector((state: RootReducer) => state.produtos)
 
   const [nome, setNome] = useState('')
   const [categoria, setCategoria] = useState('')
@@ -15,10 +18,12 @@ export default function EditarProdutos() {
 
   const dispatch = useDispatch()
 
-  const addItem = (event: React.FormEvent<HTMLFormElement>) => {
+  const navigate = useNavigate()
+
+  const updateItem = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault()
 
-    const url = 'http://localhost:8000/products'
+    const url = `http://localhost:8000/products/${id}`
 
     const data = {
       name: nome,
@@ -28,7 +33,7 @@ export default function EditarProdutos() {
     }
 
     const options = {
-      method: 'POST',
+      method: 'PUT',
       headers: {
         'Content-Type': 'application/json'
       },
@@ -50,11 +55,20 @@ export default function EditarProdutos() {
         console.error('Erro:', error.message)
       })
 
-    setNome('')
-    setCategoria('')
-    setPreco('')
-    setQuantidade('')
+    navigate('/produtos/buscarProdutos')
+    window.location.reload()
   }
+
+  useEffect(() => {
+    const produto = items.find((item) => item.id === id)
+
+    if (produto) {
+      setNome(produto.name)
+      setCategoria(produto.category)
+      setPreco(String(produto.price))
+      setQuantidade(String(produto.quantity))
+    }
+  }, [items, id])
 
   const storeData = (data: ProdutosType) => {
     dispatch(storeItems(data))
@@ -62,9 +76,9 @@ export default function EditarProdutos() {
 
   return (
     <section className="produtos__container">
-      <h2 className="produtos__container__title">Editar produto {name}</h2>
+      <h2 className="produtos__container__title">Editar produto {id}</h2>
       <form
-        onSubmit={(event) => addItem(event)}
+        onSubmit={(event) => updateItem(event)}
         className="produtos__container__form"
       >
         <label className="produtos__container__form__label" htmlFor="nome">

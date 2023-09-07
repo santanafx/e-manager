@@ -1,6 +1,6 @@
-import { useSelector } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import { parseToBrl } from '../../utils'
 
@@ -9,15 +9,44 @@ import BotaoEditar from '../../components/BotaoEditar'
 import BotaoRemover from '../../components/BotaoRemover'
 import PopupRemove from '../../components/PopupRemove'
 import { useNavigate } from 'react-router-dom'
+import { Produtos } from '../../types'
+import { storeItems } from '../../store/reducers/produtos'
+
+// window.location.reload()
 
 export default function BuscarProdutos() {
   const { items } = useSelector((state: RootReducer) => state.produtos)
   const [removeItem, setRemoveItem] = useState(false)
   const navigate = useNavigate()
 
-  const edit = (name: string) => {
-    console.log(name)
-    navigate(`/produtos/editarProdutos/${name}`)
+  const dispatch = useDispatch()
+
+  useEffect(() => {
+    const url = 'http://localhost:8000/products'
+    fetch(url)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error('Erro na requisição')
+        }
+        return response.json()
+      })
+      .then((data) => {
+        console.log('Dados recebidos:', data)
+        data.forEach((item: Produtos) => {
+          storeData(item)
+        })
+      })
+      .catch((error) => {
+        console.error('Erro:', error)
+      })
+  }, [])
+
+  const storeData = (data: Produtos) => {
+    dispatch(storeItems(data))
+  }
+
+  const edit = (id: string) => {
+    navigate(`/produtos/editarProdutos/${id}`)
   }
 
   const remove = () => {
@@ -69,7 +98,7 @@ export default function BuscarProdutos() {
               <td>{parseToBrl(element.price)}</td>
               <td>{element.quantity}</td>
               <td>
-                <BotaoEditar onClick={() => edit(element.name || '')} />
+                <BotaoEditar onClick={() => edit(element.id || '')} />
                 <BotaoRemover onClick={remove} />
               </td>
             </tr>
