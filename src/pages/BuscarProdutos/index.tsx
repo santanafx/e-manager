@@ -16,6 +16,9 @@ export default function BuscarProdutos() {
   const { items } = useSelector((state: RootReducer) => state.produtos)
   const [removeItem, setRemoveItem] = useState(false)
   const [itemId, setItemId] = useState('')
+  const [searchProduct, setSearchProduct] = useState('')
+  const [searching, setSearching] = useState(false)
+  const [searchProductObj, setSearchProductObj] = useState<Produtos>()
   const navigate = useNavigate()
 
   const dispatch = useDispatch()
@@ -53,6 +56,19 @@ export default function BuscarProdutos() {
     setItemId(id)
   }
 
+  const search = (searchProduct: string) => {
+    setSearching(true)
+    const product = items.find((item) => item.name === searchProduct)
+    if (product) {
+      setSearchProductObj(product)
+    } else {
+      setSearching(false)
+      alert(
+        `O produto com o nome ${searchProduct} não existe, tente novamente.`
+      )
+    }
+  }
+
   return (
     <section className="buscarProdutos__container">
       <h2 className="buscarProdutos__container__title">Produtos</h2>
@@ -61,6 +77,9 @@ export default function BuscarProdutos() {
           className="buscarProdutos__container__search__input"
           type="text"
           placeholder="Buscar produto"
+          value={searchProduct}
+          onChange={(event) => setSearchProduct(event.target.value)}
+          onKeyPress={() => search(searchProduct)}
         />
         <img
           className="buscarProdutos__container__search__img"
@@ -89,21 +108,39 @@ export default function BuscarProdutos() {
             </th>
           </tr>
         </thead>
-        <tbody className="buscarProdutos__container__table__body">
-          {items.map((element) => (
-            <tr key={element.id}>
-              <td>{element.id}</td>
-              <td>{element.name}</td>
-              <td>{element.category}</td>
-              <td>{parseToBrl(element.price)}</td>
-              <td>{element.quantity}</td>
+        {searching && searchProductObj ? (
+          <tbody className="buscarProdutos__container__table__body">
+            <tr key={searchProductObj.id}>
+              <td>{searchProductObj.id}</td>
+              <td>{searchProductObj.name}</td>
+              <td>{searchProductObj.category}</td>
+              <td>{parseToBrl(searchProductObj.price)}</td>
+              <td>{searchProductObj.quantity}</td>
               <td>
-                <BotaoEditar onClick={() => edit(element.id || '')} />
-                <BotaoRemover onClick={() => remove(element.id || '')} />
+                <BotaoEditar onClick={() => edit(searchProductObj.id || '')} />
+                <BotaoRemover
+                  onClick={() => remove(searchProductObj.id || '')}
+                />
               </td>
             </tr>
-          ))}
-        </tbody>
+          </tbody>
+        ) : (
+          <tbody className="buscarProdutos__container__table__body">
+            {items.map((element) => (
+              <tr key={element.id}>
+                <td>{element.id}</td>
+                <td>{element.name}</td>
+                <td>{element.category}</td>
+                <td>{parseToBrl(element.price)}</td>
+                <td>{element.quantity}</td>
+                <td>
+                  <BotaoEditar onClick={() => edit(element.id || '')} />
+                  <BotaoRemover onClick={() => remove(element.id || '')} />
+                </td>
+              </tr>
+            ))}
+          </tbody>
+        )}
       </table>
       {removeItem ? (
         <>

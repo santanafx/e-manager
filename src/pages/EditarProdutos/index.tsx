@@ -60,13 +60,13 @@ export default function EditarProdutos() {
   }
 
   useEffect(() => {
-    const produto = items.find((item) => item.id === id)
+    const product = items.find((item) => item.id === id)
 
-    if (produto) {
-      setNome(produto.name)
-      setCategoria(produto.category)
-      setPreco(String(produto.price))
-      setQuantidade(String(produto.quantity))
+    if (product) {
+      setNome(product.name)
+      setCategoria(product.category)
+      setPreco(String(product.price))
+      setQuantidade(String(product.quantity))
     }
   }, [items, id])
 
