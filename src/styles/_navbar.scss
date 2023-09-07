@@ -67,8 +67,8 @@
   height: 100%;
 }
 
-.navbar__open__menu {
-  position: absolute;
+.navbar__closed__menu {
+  position: fixed;
   top: 250px;
   left: 0;
   background-color: variables.$primary-color;

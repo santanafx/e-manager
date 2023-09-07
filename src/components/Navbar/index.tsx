@@ -95,7 +95,7 @@ export default function Navbar() {
           <div className="overlay" onClick={closeSideMenu}></div>
         </>
       ) : (
-        <button className="navbar__open__menu" onClick={openSideMenu}>
+        <button className="navbar__closed__menu" onClick={openSideMenu}>
           <MdKeyboardArrowLeft size="50" color="white" />
         </button>
       )}
