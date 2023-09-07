@@ -7,6 +7,7 @@ import Dashboard from './pages/Dashboard'
 import Produtos from './pages/Produtos/Index'
 import './css/main.css'
 import BuscarProdutos from './pages/BuscarProdutos'
+import EditarProdutos from './pages/EditarProdutos'
 
 function App() {
   return (
@@ -17,6 +18,10 @@ function App() {
           <Route path="/" element={<Dashboard />} />
           <Route path="/produtos" element={<Produtos />} />
           <Route path="/produtos/buscarProdutos" element={<BuscarProdutos />} />
+          <Route
+            path="/produtos/editarProdutos/:name"
+            element={<EditarProdutos />}
+          />
         </Routes>
       </BrowserRouter>
     </Provider>

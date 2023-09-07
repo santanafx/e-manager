@@ -8,13 +8,16 @@ import lupa from '../../assets/images/lupa.png'
 import BotaoEditar from '../../components/BotaoEditar'
 import BotaoRemover from '../../components/BotaoRemover'
 import PopupRemove from '../../components/PopupRemove'
+import { useNavigate } from 'react-router-dom'
 
 export default function BuscarProdutos() {
   const { items } = useSelector((state: RootReducer) => state.produtos)
   const [removeItem, setRemoveItem] = useState(false)
+  const navigate = useNavigate()
 
-  const edit = () => {
-    setRemoveItem(true)
+  const edit = (name: string) => {
+    console.log(name)
+    navigate(`/produtos/editarProdutos/${name}`)
   }
 
   const remove = () => {
@@ -66,7 +69,7 @@ export default function BuscarProdutos() {
               <td>{parseToBrl(element.price)}</td>
               <td>{element.quantity}</td>
               <td>
-                <BotaoEditar onClick={edit} />
+                <BotaoEditar onClick={() => edit(element.name || '')} />
                 <BotaoRemover onClick={remove} />
               </td>
             </tr>
