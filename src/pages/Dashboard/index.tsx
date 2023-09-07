@@ -2,9 +2,13 @@ import { useEffect, useState } from 'react'
 import CardProdutos from '../../components/CardProdutos'
 import { parseToBrl } from '../../utils'
 import { Produtos } from '../../types/index'
+import { useDispatch } from 'react-redux'
+import { storeItems } from '../../store/reducers/produtos'
 
 export default function Dashboard() {
   const [getData, setGetData] = useState<Produtos[]>([])
+
+  const dispatch = useDispatch()
 
   useEffect(() => {
     const url = 'http://localhost:8000/products'
@@ -18,11 +22,18 @@ export default function Dashboard() {
       .then((data) => {
         console.log('Dados recebidos:', data)
         setGetData(data)
+        data.forEach((item: Produtos) => {
+          storeData(item)
+        })
       })
       .catch((error) => {
         console.error('Erro:', error)
       })
   }, [])
+
+  const storeData = (data: Produtos) => {
+    dispatch(storeItems(data))
+  }
 
   return (
     <section className="dashboard__container">

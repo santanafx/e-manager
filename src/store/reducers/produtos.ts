@@ -14,7 +14,10 @@ const produtosSlice = createSlice({
   initialState,
   reducers: {
     storeItems: (state, action: PayloadAction<Produtos>) => {
-      state.items.push(action.payload)
+      const produto = state.items.find((item) => item.id === action.payload.id)
+      if (!produto) {
+        state.items.push(action.payload)
+      }
     }
   }
 })
