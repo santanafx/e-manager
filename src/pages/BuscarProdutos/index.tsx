@@ -15,6 +15,7 @@ import PopupRemove from '../../components/PopupRemove'
 export default function BuscarProdutos() {
   const { items } = useSelector((state: RootReducer) => state.produtos)
   const [removeItem, setRemoveItem] = useState(false)
+  const [itemId, setItemId] = useState('')
   const navigate = useNavigate()
 
   const dispatch = useDispatch()
@@ -47,8 +48,9 @@ export default function BuscarProdutos() {
     navigate(`/produtos/editarProdutos/${id}`)
   }
 
-  const remove = () => {
+  const remove = (id: string) => {
     setRemoveItem(true)
+    setItemId(id)
   }
 
   return (
@@ -97,7 +99,7 @@ export default function BuscarProdutos() {
               <td>{element.quantity}</td>
               <td>
                 <BotaoEditar onClick={() => edit(element.id || '')} />
-                <BotaoRemover onClick={remove} />
+                <BotaoRemover onClick={() => remove(element.id || '')} />
               </td>
             </tr>
           ))}
@@ -106,7 +108,7 @@ export default function BuscarProdutos() {
       {removeItem ? (
         <>
           <div className="overlay"></div>
-          <PopupRemove setRemoveItem={setRemoveItem} />
+          <PopupRemove setRemoveItem={setRemoveItem} itemId={itemId} />
         </>
       ) : (
         ''
