@@ -18,6 +18,10 @@
   box-sizing: border-box;
 }
 
+html {
+  position: relative;
+}
+
 body {
   background-color: variables.$bg-color;
 }
