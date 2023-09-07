@@ -1,0 +1,16 @@
+@use 'variables';
+
+.botaoNao {
+  background-color: variables.$label-color;
+  width: 227px;
+  height: 58px;
+  border: none;
+  border-radius: 10px;
+  font-family: variables.$primary-font;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 37.5px;
+  color: variables.$third-textColor;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px #00000026;
+}

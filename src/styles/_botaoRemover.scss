@@ -1,0 +1,15 @@
+@use 'variables';
+
+.botaoRemover {
+  background-color: variables.$first-textColor;
+  width: 120px;
+  height: 38px;
+  font-family: variables.$primary-font;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: variables.$cardline-color;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}

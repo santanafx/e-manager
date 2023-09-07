@@ -1,12 +1,26 @@
 import { useSelector } from 'react-redux'
-import lupa from '../../assets/images/lupa.png'
 import { RootReducer } from '../../store'
+import { useState } from 'react'
+
+import { parseToBrl } from '../../utils'
+
+import lupa from '../../assets/images/lupa.png'
 import BotaoEditar from '../../components/BotaoEditar'
 import BotaoRemover from '../../components/BotaoRemover'
-import { parseToBrl } from '../../utils'
+import PopupRemove from '../../components/PopupRemove'
 
 export default function BuscarProdutos() {
   const { items } = useSelector((state: RootReducer) => state.produtos)
+  const [removeOrEdit, setRemoveOrEdit] = useState(false)
+
+  const edit = () => {
+    setRemoveOrEdit(true)
+  }
+
+  const remove = () => {
+    setRemoveOrEdit(true)
+  }
+
   return (
     <section className="buscarProdutos__container">
       <h2 className="buscarProdutos__container__title">Produtos</h2>
@@ -52,13 +66,21 @@ export default function BuscarProdutos() {
               <td>{parseToBrl(element.price)}</td>
               <td>{element.quantity}</td>
               <td>
-                <BotaoEditar />
-                <BotaoRemover />
+                <BotaoEditar onClick={edit} />
+                <BotaoRemover onClick={remove} />
               </td>
             </tr>
           ))}
         </tbody>
       </table>
+      {removeOrEdit ? (
+        <>
+          <div className="overlay"></div>
+          <PopupRemove />
+        </>
+      ) : (
+        ''
+      )}
     </section>
   )
 }

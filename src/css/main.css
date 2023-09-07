@@ -247,6 +247,14 @@
   font-size: 18px;
   line-height: 27px;
 }
+.buscarProdutos__container .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.73);
+}
 
 .botaoAdicionar {
   width: 233px;
@@ -261,6 +269,98 @@
   font-size: 18px;
   line-height: 27px;
   cursor: pointer;
+}
+
+.botaoEditar {
+  background-color: #3e63ac;
+  width: 120px;
+  height: 38px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #e0e5eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.botaoRemover {
+  background-color: #cc0e30;
+  width: 120px;
+  height: 38px;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #e0e5eb;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.botaoNao {
+  background-color: #6d7989;
+  width: 227px;
+  height: 58px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 37.5px;
+  color: #f8f9fa;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+.botaoSim {
+  background-color: #cc0e30;
+  width: 227px;
+  height: 58px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 25px;
+  font-weight: 600;
+  line-height: 37.5px;
+  color: #f8f9fa;
+  cursor: pointer;
+  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.1490196078);
+}
+
+.popupRemove {
+  position: relative;
+}
+.popupRemove__container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 574px;
+  height: 208px;
+  background-color: #fefefe;
+  border-radius: 10px;
+}
+.popupRemove__container__text {
+  border-bottom: 1px solid #6d7989;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.popupRemove__container__text__paragraph {
+  font-size: 20px;
+  font-weight: 400;
+  font-family: "Poppins", sans-serif;
+  max-width: 241px;
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+}
+.popupRemove__container__buttons {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
 }
 
 * {

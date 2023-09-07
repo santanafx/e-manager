@@ -4,6 +4,11 @@
 @use 'produtos';
 @use 'buscarProdutos';
 @use 'botaoAdicionar';
+@use 'botaoEditar';
+@use 'botaoRemover';
+@use 'botaoNao';
+@use 'botaoSim';
+@use 'popupRemove';
 @use 'variables';
 
 * {
