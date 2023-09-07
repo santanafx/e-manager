@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import BotaoAdicionar from '../../components/BotaoAdicionar'
-import { storeItems } from '../../store/reducers/produtos'
+import { addItems } from '../../store/reducers/produtos'
 import { useDispatch } from 'react-redux'
 import { Produtos as ProdutosType } from '../../types'
 
@@ -54,7 +54,7 @@ export default function Produtos() {
   }
 
   const storeData = (data: ProdutosType) => {
-    dispatch(storeItems(data))
+    dispatch(addItems(data))
   }
 
   return (

@@ -18,9 +18,19 @@ const produtosSlice = createSlice({
       if (!produto) {
         state.items.push(action.payload)
       }
+    },
+    addItems: (state, action: PayloadAction<Produtos>) => {
+      const produto = state.items.find(
+        (item) => item.name.toLowerCase() === action.payload.name.toLowerCase()
+      )
+      if (!produto) {
+        state.items.push(action.payload)
+      } else {
+        alert('Um produto com este nome já existe!')
+      }
     }
   }
 })
 
-export const { storeItems } = produtosSlice.actions
+export const { storeItems, addItems } = produtosSlice.actions
 export default produtosSlice.reducer
