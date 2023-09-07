@@ -1,7 +1,11 @@
 import BotaoNao from '../BotaoNao'
 import BotaoSim from '../BotaoSim'
 
-export default function PopupRemove() {
+type Props = {
+  setRemoveItem: (value: boolean) => void
+}
+
+export default function PopupRemove({ setRemoveItem }: Props) {
   return (
     <div className="popupRemove">
       <div className="popupRemove__container">
@@ -11,7 +15,7 @@ export default function PopupRemove() {
           </p>
         </div>
         <div className="popupRemove__container__buttons">
-          <BotaoNao />
+          <BotaoNao onClick={() => setRemoveItem(false)} />
           <BotaoSim />
         </div>
       </div>

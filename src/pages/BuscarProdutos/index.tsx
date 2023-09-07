@@ -11,14 +11,14 @@ import PopupRemove from '../../components/PopupRemove'
 
 export default function BuscarProdutos() {
   const { items } = useSelector((state: RootReducer) => state.produtos)
-  const [removeOrEdit, setRemoveOrEdit] = useState(false)
+  const [removeItem, setRemoveItem] = useState(false)
 
   const edit = () => {
-    setRemoveOrEdit(true)
+    setRemoveItem(true)
   }
 
   const remove = () => {
-    setRemoveOrEdit(true)
+    setRemoveItem(true)
   }
 
   return (
@@ -73,10 +73,10 @@ export default function BuscarProdutos() {
           ))}
         </tbody>
       </table>
-      {removeOrEdit ? (
+      {removeItem ? (
         <>
           <div className="overlay"></div>
-          <PopupRemove />
+          <PopupRemove setRemoveItem={setRemoveItem} />
         </>
       ) : (
         ''
