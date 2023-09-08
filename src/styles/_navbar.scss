@@ -95,6 +95,7 @@
 
   &__hamburguer {
     display: none;
+    z-index: 4;
 
     @media (max-width: (variables.$breakpoint-tablet)) {
       display: flex;
