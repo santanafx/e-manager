@@ -19,36 +19,30 @@ Construir uma aplicação web para controle de estoque de produtos.
 
 #### - Requisitos funcionais
 
-<p align="justify">
-- Deve ser possível criar um produto.
-- Deve ser possível editar um produto.
-- Deve ser possível remover um produto.
-- Deve ser possível pesquisar produtos pela barra de pesquisa.
-</p>
+1. Deve ser possível criar um produto.
+2. Deve ser possível editar um produto.
+3. Deve ser possível remover um produto.
+4. Deve ser possível pesquisar produtos pela barra de pesquisa.
 
 #### - Requisitos não funcionais
 
-<p align="justify">
--  Deve ser utilizado `React`.
--  Deve ser utilizado `Typescript`.
--  Deve ser utilizado `SCSS`.
--  A aplicação deve ser `responsiva`.
--  Realize comunicação entre componentes utilizando `props`.
--  Utilize o `React Router` para criar rotas e permitir a navegação entre páginas.
--  Todos os elementos visuais devem ser criados do zero, não utilizar frameworks como `Bootstrap`.
--  Deve ser utilizado `commits semânticos`.
--  Deve ser utilizado `commits atômicos`.
-</p>
+1. Deve ser utilizado `React`.
+2. Deve ser utilizado `Typescript`.
+3. Deve ser utilizado `SCSS`.
+4. A aplicação deve ser `responsiva`.
+5. Realize comunicação entre componentes utilizando `props`.
+6. Utilize o `React Router` para criar rotas e permitir a navegação entre páginas.
+7. Todos os elementos visuais devem ser criados do zero, não utilizar frameworks como `Bootstrap`.
+8. Deve ser utilizado `commits semânticos`.
+9. Deve ser utilizado `commits atômicos`.
 
 #### - Regras de negócio
 
-<p align="justify">
--  Deve ser utilizado o seguinte backend:
-<a href="https://github.com/union-developers-group/e-manager-backend">Link do repositório do backend</a>.
-  Para salvar, editar e remover os produtos.
--  O preço deve ser formatado para o formato real brasileiro.
--  Os dados devem ser validados antes de ser enviado para a API.
-</p>
+1.  Deve ser utilizado o seguinte backend:
+    <a href="https://github.com/union-developers-group/e-manager-backend">Link do repositório do backend</a>.
+    Para salvar, editar e remover os produtos.
+2.  O preço deve ser formatado para o formato real brasileiro.
+3.  Os dados devem ser validados antes de ser enviado para a API.
 
 ## Video do projeto
 
