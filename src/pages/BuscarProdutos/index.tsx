@@ -144,15 +144,15 @@ export default function BuscarProdutos() {
             ))}
           </>
         )}
+        {removeItem ? (
+          <>
+            <div className="overlay"></div>
+            <PopupRemove setRemoveItem={setRemoveItem} itemId={itemId} />
+          </>
+        ) : (
+          ''
+        )}
       </div>
-      {removeItem ? (
-        <>
-          <div className="overlay"></div>
-          <PopupRemove setRemoveItem={setRemoveItem} itemId={itemId} />
-        </>
-      ) : (
-        ''
-      )}
     </section>
   )
 }

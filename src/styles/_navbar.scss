@@ -7,7 +7,7 @@
   left: 0;
   width: 285px;
   height: 100%;
-  z-index: 1;
+  z-index: 6;
 
   // @media (max-width: (variables.$breakpoint-tablet)) {
   //   height: 66px;
@@ -75,6 +75,7 @@
   left: 0;
   width: 100%;
   height: 100%;
+  z-index: 5;
 }
 
 .navbar__closed__menu {
@@ -90,6 +91,7 @@
   display: flex;
   align-items: center;
   cursor: pointer;
+  z-index: 4;
 
   &__hamburguer {
     display: none;

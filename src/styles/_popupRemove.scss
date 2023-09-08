@@ -10,6 +10,7 @@
     height: 208px;
     background-color: variables.$card-color;
     border-radius: 10px;
+    z-index: 6;
 
     &__text {
       border-bottom: 1px solid variables.$label-color;
