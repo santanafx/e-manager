@@ -7,17 +7,17 @@ No desafio foi fornecido as seguintes instruções:
 
 </p>
 
-### Objetivo
+#### - Objetivo
 
 <p align="justify">
 Construir uma aplicação web para controle de estoque de produtos.
 </p>
 
-### Layout
+#### - Layout
 
 <a href="https://www.figma.com/file/lFQtZ0pAKLBY5a4PqGo46y/Challenges-Union---e-manager?type=design&mode=design&t=aILXLawkOb8WgIzf-0">Layout do figma</a>.
 
-### Requisitos funcionais
+#### - Requisitos funcionais
 
 <p align="justify">
 - Deve ser possível criar um produto.
@@ -26,7 +26,7 @@ Construir uma aplicação web para controle de estoque de produtos.
 - Deve ser possível pesquisar produtos pela barra de pesquisa.
 </p>
 
-### Requisitos não funcionais
+#### - Requisitos não funcionais
 
 <p align="justify">
 -  Deve ser utilizado `React`.
@@ -40,7 +40,7 @@ Construir uma aplicação web para controle de estoque de produtos.
 -  Deve ser utilizado `commits atômicos`.
 </p>
 
-### Regras de negócio
+#### - Regras de negócio
 
 <p align="justify">
 -  Deve ser utilizado o seguinte backend:
