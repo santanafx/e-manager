@@ -6,6 +6,10 @@
   background-color: variables.$card-color;
   border-radius: 4px;
 
+  @media (max-width: (variables.$breakpoint-tablet)) {
+    width: 93%;
+  }
+
   &__title {
     font-family: variables.$secundary-font;
     font-weight: 600;

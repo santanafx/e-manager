@@ -9,6 +9,16 @@
   height: 100%;
   z-index: 1;
 
+  // @media (max-width: (variables.$breakpoint-tablet)) {
+  //   height: 66px;
+  //   background-color: variables.$primary-color;
+  //   position: fixed;
+  //   top: 0;
+  //   left: 0;
+  //   right: 0;
+  //   width: 100%;
+  // }
+
   &__logo__img {
     margin: 26px 22.61px 53px 33px;
   }
@@ -79,4 +89,32 @@
   border-bottom-right-radius: 5px;
   display: flex;
   align-items: center;
+
+  &__hamburguer {
+    display: none;
+
+    @media (max-width: (variables.$breakpoint-tablet)) {
+      display: flex;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      flex-direction: column;
+      cursor: pointer;
+      padding: 15px;
+      background-color: variables.$primary-color;
+    }
+
+    &__item {
+      width: 30px;
+      height: 3px;
+      background-color: variables.$secundary-color;
+      margin: 4px 0;
+      transition: 0.4s;
+    }
+  }
+
+  @media (max-width: (variables.$breakpoint-tablet)) {
+    display: none;
+  }
 }

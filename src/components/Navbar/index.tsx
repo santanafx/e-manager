@@ -95,9 +95,21 @@ export default function Navbar() {
           <div className="overlay" onClick={closeSideMenu}></div>
         </>
       ) : (
-        <button className="navbar__closed__menu" onClick={openSideMenu}>
-          <MdKeyboardArrowLeft size="50" color="white" />
-        </button>
+        <>
+          <button className="navbar__closed__menu" onClick={openSideMenu}>
+            <MdKeyboardArrowLeft size="50" color="white" />
+          </button>
+          <div className="navbar__closed__menu__hamburguer">
+            <div
+              className="navbar__closed__menu__hamburguer__icon"
+              onClick={openSideMenu}
+            >
+              <div className="navbar__closed__menu__hamburguer__item"></div>
+              <div className="navbar__closed__menu__hamburguer__item"></div>
+              <div className="navbar__closed__menu__hamburguer__item"></div>
+            </div>
+          </div>
+        </>
       )}
     </>
   )

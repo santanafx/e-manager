@@ -76,7 +76,7 @@ export default function EditarProdutos() {
 
   return (
     <section className="produtos__container">
-      <h2 className="produtos__container__title">Editar produto {id}</h2>
+      <h2 className="produtos__container__title">Editar produto {nome}</h2>
       <form
         onSubmit={(event) => updateItem(event)}
         className="produtos__container__form"
