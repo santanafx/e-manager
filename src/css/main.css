@@ -278,6 +278,12 @@
   transform: translate(0, -50%);
   margin-left: 12px;
 }
+@media (max-width: 768px) {
+  .buscarProdutos__container__table {
+    min-width: 400px;
+    margin-left: 250px;
+  }
+}
 .buscarProdutos__container__table__head {
   background-color: #e0e5eb;
   color: #224385;
@@ -289,6 +295,12 @@
   display: grid;
   grid-template-columns: repeat(6, 173px);
 }
+@media (max-width: 768px) {
+  .buscarProdutos__container__table__head {
+    grid-template-columns: repeat(6, 100px);
+    font-size: 12px;
+  }
+}
 .buscarProdutos__container__table__head__row {
   margin-bottom: 24px;
 }
@@ -298,6 +310,11 @@
   display: flex;
   align-items: center;
   margin-left: 10px;
+}
+@media (max-width: 768px) {
+  .buscarProdutos__container__table__head__item {
+    margin-right: auto;
+  }
 }
 .buscarProdutos__container__table__body {
   font-family: "Poppins", sans-serif;
@@ -309,6 +326,12 @@
   padding-bottom: 18.5px;
   padding-top: 29px;
   border-bottom: 1px solid #aebbcd;
+}
+@media (max-width: 768px) {
+  .buscarProdutos__container__table__body {
+    grid-template-columns: repeat(6, 100px);
+    font-size: 12px;
+  }
 }
 .buscarProdutos__container .overlay {
   position: absolute;
@@ -348,6 +371,12 @@
   cursor: pointer;
   margin-bottom: 6px;
 }
+@media (max-width: 768px) {
+  .botaoEditar {
+    width: 80px;
+    height: 28px;
+  }
+}
 
 .botaoRemover {
   background-color: #cc0e30;
@@ -361,6 +390,12 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
+}
+@media (max-width: 768px) {
+  .botaoRemover {
+    width: 80px;
+    height: 28px;
+  }
 }
 
 .botaoNao {

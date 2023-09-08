@@ -13,4 +13,9 @@
   border-radius: 10px;
   cursor: pointer;
   margin-bottom: 6px;
+
+  @media (max-width: (variables.$breakpoint-tablet)) {
+    width: 80px;
+    height: 28px;
+  }
 }

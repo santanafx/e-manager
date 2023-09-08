@@ -87,60 +87,64 @@ export default function BuscarProdutos() {
           alt="Search"
         />
       </div>
-      <div className="buscarProdutos__container__table__head">
-        <span className="buscarProdutos__container__table__head__item">ID</span>
-        <span className="buscarProdutos__container__table__head__item">
-          Nome
-        </span>
-        <span className="buscarProdutos__container__table__head__item">
-          Categoria
-        </span>
-        <span className="buscarProdutos__container__table__head__item">
-          Preço
-        </span>
-        <span className="buscarProdutos__container__table__head__item">
-          Quantidade
-        </span>
-        <span className="buscarProdutos__container__table__head__item">
-          Ações
-        </span>
-      </div>
-
-      {searching && searchProductObj ? (
-        <div
-          className="buscarProdutos__container__table__body"
-          key={searchProductObj.id}
-        >
-          <span>{searchProductObj.id}</span>
-          <span>{searchProductObj.name}</span>
-          <span>{searchProductObj.category}</span>
-          <span>{parseToBrl(searchProductObj.price)}</span>
-          <span>{searchProductObj.quantity}</span>
-          <span>
-            <BotaoEditar onClick={() => edit(searchProductObj.id || '')} />
-            <BotaoRemover onClick={() => remove(searchProductObj.id || '')} />
+      <div className="buscarProdutos__container__table">
+        <div className="buscarProdutos__container__table__head">
+          <span className="buscarProdutos__container__table__head__item">
+            ID
+          </span>
+          <span className="buscarProdutos__container__table__head__item">
+            Nome
+          </span>
+          <span className="buscarProdutos__container__table__head__item">
+            Categoria
+          </span>
+          <span className="buscarProdutos__container__table__head__item">
+            Preço
+          </span>
+          <span className="buscarProdutos__container__table__head__item">
+            Quantidade
+          </span>
+          <span className="buscarProdutos__container__table__head__item">
+            Ações
           </span>
         </div>
-      ) : (
-        <>
-          {items.map((element) => (
-            <div
-              key={element.id}
-              className="buscarProdutos__container__table__body"
-            >
-              <span>{element.id}</span>
-              <span>{element.name}</span>
-              <span>{element.category}</span>
-              <span>{parseToBrl(element.price)}</span>
-              <span>{element.quantity}</span>
-              <span>
-                <BotaoEditar onClick={() => edit(element.id || '')} />
-                <BotaoRemover onClick={() => remove(element.id || '')} />
-              </span>
-            </div>
-          ))}
-        </>
-      )}
+
+        {searching && searchProductObj ? (
+          <div
+            className="buscarProdutos__container__table__body"
+            key={searchProductObj.id}
+          >
+            <span>{searchProductObj.id}</span>
+            <span>{searchProductObj.name}</span>
+            <span>{searchProductObj.category}</span>
+            <span>{parseToBrl(searchProductObj.price)}</span>
+            <span>{searchProductObj.quantity}</span>
+            <span>
+              <BotaoEditar onClick={() => edit(searchProductObj.id || '')} />
+              <BotaoRemover onClick={() => remove(searchProductObj.id || '')} />
+            </span>
+          </div>
+        ) : (
+          <>
+            {items.map((element) => (
+              <div
+                key={element.id}
+                className="buscarProdutos__container__table__body"
+              >
+                <span>{element.id}</span>
+                <span>{element.name}</span>
+                <span>{element.category}</span>
+                <span>{parseToBrl(element.price)}</span>
+                <span>{element.quantity}</span>
+                <span>
+                  <BotaoEditar onClick={() => edit(element.id || '')} />
+                  <BotaoRemover onClick={() => remove(element.id || '')} />
+                </span>
+              </div>
+            ))}
+          </>
+        )}
+      </div>
       {removeItem ? (
         <>
           <div className="overlay"></div>
