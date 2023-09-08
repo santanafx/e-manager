@@ -32,6 +32,10 @@
       color: variables.$label-color;
       background-color: variables.$bg-color;
       line-height: 27px;
+
+      @media (max-width: (variables.$breakpoint-tablet)) {
+        width: 100%;
+      }
     }
 
     &__img {
@@ -51,7 +55,9 @@
       font-size: 18px;
       font-weight: 400;
       line-height: 27px;
-      margin-bottom: 38px;
+      margin-bottom: 2px;
+      display: grid;
+      grid-template-columns: repeat(6, 173px);
 
       &__row {
         margin-bottom: 24px;
@@ -60,6 +66,9 @@
       &__item {
         width: 173.55px;
         height: 43px;
+        display: flex;
+        align-items: center;
+        margin-left: 10px;
       }
     }
 
@@ -68,6 +77,11 @@
       font-weight: 400;
       font-size: 18px;
       line-height: 27px;
+      display: grid;
+      grid-template-columns: repeat(6, 173px);
+      padding-bottom: 18.5px;
+      padding-top: 29px;
+      border-bottom: 1px solid variables.$line-color;
     }
   }
 

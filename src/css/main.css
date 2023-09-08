@@ -69,6 +69,7 @@
   border-bottom-right-radius: 5px;
   display: flex;
   align-items: center;
+  cursor: pointer;
 }
 .navbar__closed__menu__hamburguer {
   display: none;
@@ -265,6 +266,11 @@
   background-color: #f9f7f7;
   line-height: 27px;
 }
+@media (max-width: 768px) {
+  .buscarProdutos__container__search__input {
+    width: 100%;
+  }
+}
 .buscarProdutos__container__search__img {
   position: absolute;
   top: 50%;
@@ -279,7 +285,9 @@
   font-size: 18px;
   font-weight: 400;
   line-height: 27px;
-  margin-bottom: 38px;
+  margin-bottom: 2px;
+  display: grid;
+  grid-template-columns: repeat(6, 173px);
 }
 .buscarProdutos__container__table__head__row {
   margin-bottom: 24px;
@@ -287,12 +295,20 @@
 .buscarProdutos__container__table__head__item {
   width: 173.55px;
   height: 43px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
 }
 .buscarProdutos__container__table__body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   font-size: 18px;
   line-height: 27px;
+  display: grid;
+  grid-template-columns: repeat(6, 173px);
+  padding-bottom: 18.5px;
+  padding-top: 29px;
+  border-bottom: 1px solid #aebbcd;
 }
 .buscarProdutos__container .overlay {
   position: absolute;
@@ -330,6 +346,7 @@
   border: none;
   border-radius: 10px;
   cursor: pointer;
+  margin-bottom: 6px;
 }
 
 .botaoRemover {
