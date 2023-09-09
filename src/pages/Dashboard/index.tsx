@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react'
-import CardProdutos from '../../components/CardProdutos'
+import { useDispatch } from 'react-redux'
+
 import { parseToBrl } from '../../utils'
 import { Produtos } from '../../types/index'
-import { useDispatch } from 'react-redux'
 import { storeItems } from '../../store/reducers/produtos'
+import CardProdutos from '../../components/CardProdutos'
 
 export default function Dashboard() {
   const [getData, setGetData] = useState<Produtos[]>([])

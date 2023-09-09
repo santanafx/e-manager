@@ -1,10 +1,11 @@
 import { useState, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
-import { storeItems } from '../../store/reducers/produtos'
 import { useDispatch, useSelector } from 'react-redux'
-import { Produtos as ProdutosType } from '../../types'
-import BotaoAtualizar from '../../components/BotaoAtualizar'
 import { useParams } from 'react-router-dom'
+
+import { storeItems } from '../../store/reducers/produtos'
+import BotaoAtualizar from '../../components/BotaoAtualizar'
+import { Produtos as ProdutosType } from '../../types'
 import { RootReducer } from '../../store'
 
 export default function EditarProdutos() {

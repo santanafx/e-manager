@@ -1,7 +1,8 @@
+import { useDispatch } from 'react-redux'
 import { useState } from 'react'
+
 import BotaoAdicionar from '../../components/BotaoAdicionar'
 import { addItems } from '../../store/reducers/produtos'
-import { useDispatch } from 'react-redux'
 import { Produtos as ProdutosType } from '../../types'
 
 export default function Produtos() {
