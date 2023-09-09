@@ -101,7 +101,7 @@ Clique com o botão direito em cima da pasta e selecione "Abrir com Code"
 
 <img align="center" src='./public/images/readme/instrucao-abrirCode.png'>
 
-Uma vez que o Visual studio estiver aberto com o projeto desejado, abra o terminal clicando no menu da aba superior e digite no terminal aberto o código "npm install" e logo em seguida digite "npm start". Uma janela do browser será aberta e o projeto será iniciado em seu computador.
+Uma vez que o Visual studio estiver aberto com o projeto desejado, abra o terminal clicando no menu da aba superior e digite no terminal aberto o código "npm install" e logo em seguida digite "npm run dev". Uma janela do browser será aberta e o projeto será iniciado em seu computador.
 
 <img align="center" src='./public/images/readme/instrucao-terminal.png'>
 
