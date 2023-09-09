@@ -107,6 +107,10 @@ Uma vez que o Visual studio estiver aberto com o projeto desejado, abra o termin
 
 <img align="center" src='./public/images/readme/instrucao-npm.png'>
 
+É necessário rodar também o backend para realizar a conexão com a API. As instruções podem ser encontradas no link do repositório abaixo:
+
+<a href="https://github.com/union-developers-group/e-manager-backend">Link do repositório do backend</a>.
+
 <br />
 
 # :sunglasses: Autor <a name="id07"></a>
