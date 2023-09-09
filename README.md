@@ -1,9 +1,9 @@
 # Sobre o projeto
 
 <p align="justify">
-O projeto consistiu em realizar um desafio proposto pela Union Developers. A Union Developers é uma empresa que reune desenvolvedores juniors para proporcionar um ambiente prático e imersivo, semelhante ao que você encontrará no mercado de trabalho.
+O projeto consistiu em realizar um desafio proposto pela Union Developers. A Union Developers é uma empresa que reúne desenvolvedores juniores para proporcionar um ambiente prático e imersivo, semelhante ao que você encontrará no mercado de trabalho.
 
-No desafio foi fornecido as seguintes instruções:
+No desafio foram fornecidas as seguintes instruções:
 
 </p>
 
@@ -107,7 +107,7 @@ Uma vez que o Visual studio estiver aberto com o projeto desejado, abra o termin
 
 <img align="center" src='./public/images/readme/instrucao-npm.png'>
 
-É necessário rodar também o backend para realizar a conexão com a API. As instruções podem ser encontradas no link do repositório abaixo:
+É necessário também rodar o backend para realizar a conexão com a API. As instruções podem ser encontradas no link do repositório abaixo:
 
 <a href="https://github.com/union-developers-group/e-manager-backend">Link do repositório do backend</a>.
 
