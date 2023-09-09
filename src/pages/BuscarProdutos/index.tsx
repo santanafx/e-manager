@@ -56,16 +56,18 @@ export default function BuscarProdutos() {
     setItemId(id)
   }
 
-  const search = (searchProduct: string) => {
-    setSearching(true)
-    const product = items.find((item) => item.name === searchProduct)
-    if (product) {
-      setSearchProductObj(product)
-    } else {
-      setSearching(false)
-      alert(
-        `O produto com o nome ${searchProduct} não existe, tente novamente.`
-      )
+  const search = (enter: string, searchProduct: string) => {
+    if (enter === 'Enter') {
+      setSearching(true)
+      const product = items.find((item) => item.name === searchProduct)
+      if (product) {
+        setSearchProductObj(product)
+      } else {
+        setSearching(false)
+        alert(
+          `O produto com o nome ${searchProduct} não existe, tente novamente.`
+        )
+      }
     }
   }
 
@@ -79,7 +81,7 @@ export default function BuscarProdutos() {
           placeholder="Buscar produto"
           value={searchProduct}
           onChange={(event) => setSearchProduct(event.target.value)}
-          onKeyPress={() => search(searchProduct)}
+          onKeyPress={(event) => search(event.key, searchProduct)}
         />
         <img
           className="buscarProdutos__container__search__img"
