@@ -75,39 +75,50 @@ export default function EditarProdutos() {
   }
 
   return (
-    <section className="produtos__container">
-      <h2 className="produtos__container__title">Editar produto {nome}</h2>
+    <section className="editarProdutos__container">
+      <h2 className="editarProdutos__container__title">
+        Editar produto {nome}
+      </h2>
       <form
         onSubmit={(event) => updateItem(event)}
-        className="produtos__container__form"
+        className="editarProdutos__container__form"
       >
-        <label className="produtos__container__form__label" htmlFor="nome">
+        <label
+          className="editarProdutos__container__form__label"
+          htmlFor="nome"
+        >
           Nome
         </label>
         <input
-          className="produtos__container__form__input"
+          className="editarProdutos__container__form__input"
           type="text"
           placeholder="Nome do produto"
           id="nome"
           value={nome}
           onChange={(event) => setNome(event.target.value)}
         />
-        <label className="produtos__container__form__label" htmlFor="categoria">
+        <label
+          className="editarProdutos__container__form__label"
+          htmlFor="categoria"
+        >
           Categoria
         </label>
         <input
-          className="produtos__container__form__input"
+          className="editarProdutos__container__form__input"
           type="text"
           placeholder="Categoria do produto"
           id="categoria"
           value={categoria}
           onChange={(event) => setCategoria(event.target.value)}
         />
-        <label className="produtos__container__form__label" htmlFor="preco">
+        <label
+          className="editarProdutos__container__form__label"
+          htmlFor="preco"
+        >
           Preço
         </label>
         <input
-          className="produtos__container__form__input"
+          className="editarProdutos__container__form__input"
           type="text"
           placeholder="0"
           id="preco"
@@ -115,13 +126,13 @@ export default function EditarProdutos() {
           onChange={(event) => setPreco(event.target.value)}
         />
         <label
-          className="produtos__container__form__label"
+          className="editarProdutos__container__form__label"
           htmlFor="quantidade"
         >
           Quantidade
         </label>
         <input
-          className="produtos__container__form__input"
+          className="editarProdutos__container__form__input"
           type="text"
           placeholder="0"
           id="quantidade"

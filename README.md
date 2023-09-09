@@ -7,24 +7,24 @@ No desafio foi fornecido as seguintes instruções:
 
 </p>
 
-#### - Objetivo
+#### Objetivo
 
 <p align="justify">
 Construir uma aplicação web para controle de estoque de produtos.
 </p>
 
-#### - Layout
+#### Layout
 
 <a href="https://www.figma.com/file/lFQtZ0pAKLBY5a4PqGo46y/Challenges-Union---e-manager?type=design&mode=design&t=aILXLawkOb8WgIzf-0">Layout do figma</a>.
 
-#### - Requisitos funcionais
+#### Requisitos funcionais
 
 1. Deve ser possível criar um produto.
 2. Deve ser possível editar um produto.
 3. Deve ser possível remover um produto.
 4. Deve ser possível pesquisar produtos pela barra de pesquisa.
 
-#### - Requisitos não funcionais
+#### Requisitos não funcionais
 
 1. Deve ser utilizado `React`.
 2. Deve ser utilizado `Typescript`.
@@ -36,7 +36,7 @@ Construir uma aplicação web para controle de estoque de produtos.
 8. Deve ser utilizado `commits semânticos`.
 9. Deve ser utilizado `commits atômicos`.
 
-#### - Regras de negócio
+#### Regras de negócio
 
 1.  Deve ser utilizado o seguinte backend:
     <a href="https://github.com/union-developers-group/e-manager-backend">Link do repositório do backend</a>.
@@ -46,7 +46,7 @@ Construir uma aplicação web para controle de estoque de produtos.
 
 ## Video do projeto
 
-<a href="https://studio.youtube.com/video/9eQrSydi5WA/edit">Video do projeto aqui</a>.
+<a href="https://www.youtube.com/watch?v=wWE6dqPuIK8">Video do projeto aqui</a>.
 
 ## Linguagens utilizadas
 
